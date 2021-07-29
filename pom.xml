@@ -51,6 +51,8 @@
         <jedis_version>2.6.0</jedis_version>
         <cglib_version>3.1</cglib_version>
         <javassist_version>3.26.0-GA</javassist_version>
+        <!-- lombok -->
+        <lombok_version>1.18.12</lombok_version>
     </properties>
 
     <dependencyManagement>
@@ -117,6 +119,13 @@
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis_version}</version>
+            </dependency>
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok_version}</version>
+                <optional>true</optional>
             </dependency>
         </dependencies>
     </dependencyManagement>

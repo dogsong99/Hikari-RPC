@@ -1,9 +1,9 @@
-package com.dogsong.rpc.domain;
+package com.dogsong.rpc.common;
 
 /**
  * TODO
  *
- * @author <a href="mailto:domi.song@yunzhihui.com">domisong</a>
+ * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2021/7/28
  */
 public class LocalServerInfo {
@@ -11,7 +11,7 @@ public class LocalServerInfo {
     /** 本地启动地址 */
     public static String LOCAL_HOST;
 
-    /** 本地启动IP */
+    /** 本地启动端口 */
     public static int LOCAL_PORT;
 
 }

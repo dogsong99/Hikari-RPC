@@ -6,9 +6,9 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 /**
- * TODO
+ * 网络端口工具类
  *
- * @author <a href="mailto:domi.song@yunzhihui.com">domisong</a>
+ * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2021/7/28
  */
 public class NetUtil {

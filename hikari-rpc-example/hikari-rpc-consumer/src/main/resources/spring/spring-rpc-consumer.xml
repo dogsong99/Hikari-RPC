@@ -5,8 +5,8 @@
 	  http://www.rpc.hikari.org/schema/rpc http://www.rpc.hikari.org/schema/rpc/hikari-rpc.xsd">
 
     <!-- 注册中心 -->
-    <rpc:server id="consumer" host="127.0.0.1" port="6379"/>
+    <rpc:server id="consumer" host="127.0.0.1" port="6379" hikariPort="17011"/>
 
-    <rpc:consumer id="exampleConsumeService" nozzle="com.dogsong.example.ExampleService" alias="hikariRpc"/>
+    <rpc:consumer id="exampleService" nozzle="com.dogsong.example.ExampleService" alias="hikariRpc"/>
 
 </beans>

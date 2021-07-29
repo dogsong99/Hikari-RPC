@@ -21,6 +21,11 @@
                             <xsd:documentation><![CDATA[ 栈台岸口  ]]></xsd:documentation>
                         </xsd:annotation>
                     </xsd:attribute>
+                    <xsd:attribute name="hikariPort" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation><![CDATA[ 光岸口  ]]></xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
                 </xsd:extension>
             </xsd:complexContent>
         </xsd:complexType>

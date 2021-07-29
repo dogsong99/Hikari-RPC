@@ -10,6 +10,16 @@ public class ServerConfig {
     protected String host;  //注册中心地址
     protected int port;     //注册中心端口
 
+    protected int hikariPort;     //注册中心端口
+
+    public int getHikariPort() {
+        return hikariPort;
+    }
+
+    public void setHikariPort(int hikariPort) {
+        this.hikariPort = hikariPort;
+    }
+
     public String getHost() {
         return host;
     }

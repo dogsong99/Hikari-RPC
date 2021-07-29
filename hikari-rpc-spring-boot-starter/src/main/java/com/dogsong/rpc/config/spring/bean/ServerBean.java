@@ -31,11 +31,9 @@ public class ServerBean extends ServerConfig implements ApplicationContextAware 
         RedisRegistryCenter.init(host, port);
         logger.info("启动注册中心完成 {} {}", host, port);
 
-        ServerProperties bean = applicationContext.getBean(ServerProperties.class);
-
         //初始化服务端
         logger.info("初始化生产端服务 ...");
-        ServerSocket serverSocket = new ServerSocket(applicationContext, bean.getHikariPort());
+        ServerSocket serverSocket = new ServerSocket(applicationContext, hikariPort);
         Thread thread = new Thread(serverSocket);
         thread.start();
         while (!serverSocket.isActiveSocketServer()) {

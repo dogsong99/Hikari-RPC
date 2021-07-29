@@ -31,7 +31,7 @@ public class ServerAutoConfiguration implements ApplicationContextAware {
         logger.info("启动 Redis模拟注册中心完成，{} {}", serverProperties.getHost(), serverProperties.getPort());
 
         logger.info("初始化生产端服务开始");
-        ServerSocket serverSocket = new ServerSocket(applicationContext);
+        ServerSocket serverSocket = new ServerSocket(applicationContext, serverProperties.getHikariPort());
         new Thread(serverSocket).start();
         while (!serverSocket.isActiveSocketServer()) {
             try {

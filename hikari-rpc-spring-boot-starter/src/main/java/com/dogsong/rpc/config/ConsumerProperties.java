@@ -9,14 +9,14 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2021/7/29
  */
-@Data
-@ConfigurationProperties("hikari.rpc.consumer")
-public class ConsumerProperties {
-
-    /** 接口 */
-    private String nozzle;
-
-    /** 别名 */
-    private String alias;
-
-}
+// @Data
+// @ConfigurationProperties("rpc.consumer")
+// public class ConsumerProperties {
+//
+//     /** 接口 */
+//     private String nozzle;
+//
+//     /** 别名 */
+//     private String alias;
+//
+// }

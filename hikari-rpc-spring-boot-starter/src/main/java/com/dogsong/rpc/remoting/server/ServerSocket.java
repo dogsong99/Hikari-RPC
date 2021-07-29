@@ -16,6 +16,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
@@ -25,17 +26,18 @@ import javax.annotation.Resource;
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2021/7/28
  */
+@Component
 public class ServerSocket implements Runnable {
 
     private ChannelFuture channelFuture;
 
     private transient ApplicationContext applicationContext;
 
-    @Resource
-    private ServerProperties serverProperties;
+    private final int hikariPort;
 
-    public ServerSocket(ApplicationContext applicationContext){
+    public ServerSocket(ApplicationContext applicationContext, int port){
         this.applicationContext = applicationContext;
+        this.hikariPort = port;
     }
 
     public boolean isActiveSocketServer() {
@@ -70,7 +72,7 @@ public class ServerSocket implements Runnable {
                         }
                     });
             // 启动初始端口
-            int port = serverProperties.getHikariPort() != 0 ? 17011 : serverProperties.getHikariPort();
+            int port = hikariPort != 0 ? 17011 : hikariPort;
 
             while (NetUtil.isPortUsing(port)) {
                 port++;

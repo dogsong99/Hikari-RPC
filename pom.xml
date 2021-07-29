@@ -22,11 +22,12 @@
 
     <groupId>com.dogsong</groupId>
     <artifactId>Hikari-RPC</artifactId>
-    <version>${reversion}</version>
+    <version>1.0-SNAPSHOT</version>
 
     <description>The parent project of hikari-rpc</description>
     <modules>
         <module>hikari-rpc-spring-boot-starter</module>
+        <module>hikari-rpc-example</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -39,7 +40,7 @@
         <netty_version>4.1.25.Final</netty_version>
         <log4j_version>1.2.17</log4j_version>
         <!-- Spring -->
-        <spring_version>4.3.19.RELEASE</spring_version>
+        <spring_version>5.1.4.RELEASE</spring_version>
         <!-- Spring boot -->
         <spring_boot_version>2.1.2.RELEASE</spring_boot_version>
         <junit_version>4.11</junit_version>
@@ -64,17 +65,17 @@
                 <version>${netty_version}</version>
             </dependency>
             <!-- Spring -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${spring_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
-                <version>${spring_version}</version>
-                <scope>test</scope>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework</groupId>-->
+<!--                <artifactId>spring-context</artifactId>-->
+<!--                <version>${spring_version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework</groupId>-->
+<!--                <artifactId>spring-test</artifactId>-->
+<!--                <version>${spring_version}</version>-->
+<!--                <scope>test</scope>-->
+<!--            </dependency>-->
             <!-- Spring boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>

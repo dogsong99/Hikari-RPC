@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @since 2021/7/28
  */
 @Data
-@ConfigurationProperties("hikari.rpc.server")
+@ConfigurationProperties("rpc.server")
 public class ServerProperties {
 
     /** 注册中心地址 */

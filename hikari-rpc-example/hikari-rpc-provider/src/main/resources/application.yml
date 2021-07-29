@@ -1,0 +1,16 @@
+server:
+  port: 10001
+
+spring:
+  application:
+    name: hikari-rpc-example-provider
+rpc:
+  server:
+    host: 127.0.0.1
+    port: 6379
+    hikariPort: 17011
+
+  provider:
+    nozzle: com.dogsong.example.ExampleService
+    reference: exampleService
+    alias: hikariRpc

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpc="http://www.rpc.hikari.org/schema/rpc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.rpc.hikari.org/schema/rpc http://www.rpc.hikari.org/schema/rpc/hikari-rpc.xsd">
+
+    <!-- 注册中心 -->
+    <rpc:server id="consumer" host="127.0.0.1" port="6379"/>
+
+    <rpc:consumer id="exampleConsumeService" nozzle="com.dogsong.example.ExampleService" alias="hikariRpc"/>
+
+</beans>

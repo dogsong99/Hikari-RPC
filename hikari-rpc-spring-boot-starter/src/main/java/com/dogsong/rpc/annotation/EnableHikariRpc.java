@@ -18,8 +18,8 @@ import java.lang.annotation.Target;
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-@Import({ServerAutoConfiguration.class, ProviderAutoConfiguration.class, ConsumerFactoryBean.class})
-@EnableConfigurationProperties({ServerProperties.class, ProviderProperties.class, ConsumerProperties.class})
+@Import({ServerAutoConfiguration.class, ProviderAutoConfiguration.class})
+@EnableConfigurationProperties({ServerProperties.class, ProviderProperties.class})
 @ComponentScan("com.dogsong.*")
 public @interface EnableHikariRpc {
 

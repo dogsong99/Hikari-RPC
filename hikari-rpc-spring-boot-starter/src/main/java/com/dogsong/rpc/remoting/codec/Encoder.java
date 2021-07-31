@@ -21,6 +21,7 @@ public class Encoder extends MessageToByteEncoder {
 
     @Override
     protected void encode(ChannelHandlerContext ctx, Object msg, ByteBuf out) throws Exception {
+        // 序列化
         if (genericClass.isInstance(msg)) {
             byte[] data = ProtostuffSerialization.serialize(msg);
             out.writeInt(data.length);

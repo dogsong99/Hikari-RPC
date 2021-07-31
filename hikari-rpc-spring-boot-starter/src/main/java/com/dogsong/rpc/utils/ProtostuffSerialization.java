@@ -4,8 +4,8 @@ import com.dyuproject.protostuff.LinkedBuffer;
 import com.dyuproject.protostuff.ProtostuffIOUtil;
 import com.dyuproject.protostuff.Schema;
 import com.dyuproject.protostuff.runtime.RuntimeSchema;
-import org.springframework.objenesis.Objenesis;
-import org.springframework.objenesis.ObjenesisStd;
+import org.objenesis.Objenesis;
+import org.objenesis.ObjenesisStd;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -54,6 +54,10 @@ public class ProtostuffSerialization {
 
     /**
      * 反序列化 (字节数组 -> 对象)
+     *      <p>
+     *          如果一个类没有参数为空的构造方法时候，那么直接调用newInstance方法试图得到一个实例对象的时候是会抛出异常的
+     *          通过ObjenesisStd可以完美的避开这个问题
+     *      </p>
      *
      * @param data 字节数组
      * @param cls class

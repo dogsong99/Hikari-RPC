@@ -35,9 +35,10 @@ public class Decoder extends ByteToMessageDecoder {
             in.resetReaderIndex();
             return;
         }
+        // 将 ByteBuf 转换为 byte[]
         byte[] data = new byte[dataLength];
         in.readBytes(data);
-
+        // 将 data 转换成 object
         Object obj = ProtostuffSerialization.deserialize(data, genericClass);
         out.add(obj);
     }

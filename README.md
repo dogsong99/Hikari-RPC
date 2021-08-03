@@ -2,7 +2,7 @@
 
 ## 概述
 Hikari-RPC 是一个学习了解 RPC 简单框架，同时也是一个支持高扩展性的 Java RPC 框架。
-![img.png](hikari-rpc-overview.png)
+![img.png](imgfiles/hikari-rpc-overview.png)
 
 
 ## 特点
@@ -11,12 +11,17 @@ Hikari-RPC 是一个学习了解 RPC 简单框架，同时也是一个支持高�
 - 集成常用组件 zookeeper
 - 高可扩展性，可根据需要轻松改进功能
 
+## 需要
+编译需要 JDK 8 及以上、Maven 3.2.5 及以上。  
+运行需求 JDK 8 及以上。
 
 ## 快速开始
 
-### 服务端
+### 服务端（生产者）
 
-### 客户端
+
+### 客户端（消费者）
+
 
 
 

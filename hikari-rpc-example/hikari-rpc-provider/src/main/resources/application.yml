@@ -4,13 +4,12 @@ server:
 spring:
   application:
     name: hikari-rpc-example-provider
-rpc:
-  server:
-    host: 127.0.0.1
-    port: 6379
-    hikariPort: 17011
 
-  provider:
-    nozzle: com.dogsong.example.ExampleService
-    reference: exampleService
-    alias: hikariRpc
+# hikari-rpc config
+hikari:
+  rpc:
+    register-address: 127.0.0.1:2181
+    server-name: provider
+    timeout: 2000
+    host: 127.0.0.1
+    port: ${server.port}

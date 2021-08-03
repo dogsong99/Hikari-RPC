@@ -5,3 +5,9 @@ spring:
   application:
     name: hikari-rpc-example-consumer
 
+# hikari-rpc config
+hikari:
+  rpc:
+    register-address: 127.0.0.1:2181
+    server-name: consumer
+    timeout: 2000

@@ -1,9 +1,9 @@
 package com.dogsong.example;
 
 /**
- * TODO
+ * test interface
  *
- * @author <a href="mailto:domi.song@yunzhihui.com">domisong</a>
+ * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2021/7/29
  */
 public interface ExampleService {

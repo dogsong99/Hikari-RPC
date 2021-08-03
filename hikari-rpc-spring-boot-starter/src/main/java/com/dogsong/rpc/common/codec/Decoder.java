@@ -1,6 +1,6 @@
-package com.dogsong.rpc.remoting.codec;
+package com.dogsong.rpc.common.codec;
 
-import com.dogsong.rpc.utils.ProtostuffSerialization;
+import com.dogsong.rpc.util.ProtostuffSerialization;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
@@ -11,7 +11,7 @@ import java.util.List;
  * 解码器
  *
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
- * @since 2021/7/29
+ * @since 2021/8/3
  */
 public class Decoder extends ByteToMessageDecoder {
 

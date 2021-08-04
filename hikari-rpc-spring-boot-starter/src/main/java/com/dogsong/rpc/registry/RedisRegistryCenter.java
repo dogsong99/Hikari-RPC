@@ -5,11 +5,12 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * TODO
+ * redis 注册中心
  *
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2021/7/28
  */
+@Deprecated
 public class RedisRegistryCenter {
 
     /** 非切片额客户端连接 */

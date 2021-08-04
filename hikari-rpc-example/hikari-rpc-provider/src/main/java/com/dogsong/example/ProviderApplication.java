@@ -1,17 +1,15 @@
 package com.dogsong.example;
 
-import com.dogsong.rpc.annotation.EnableHikariRpc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * TODO
+ * example provider
  *
- * @author <a href="mailto:domi.song@yunzhihui.com">domisong</a>
+ * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2021/7/29
  */
 @SpringBootApplication
-@EnableHikariRpc
 public class ProviderApplication {
 
     public static void main(String[] args) {

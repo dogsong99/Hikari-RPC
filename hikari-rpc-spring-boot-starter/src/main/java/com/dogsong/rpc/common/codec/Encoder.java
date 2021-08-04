@@ -8,7 +8,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 /**
  * 转码器
  *
- * @author <a href="mailto:domi.song@yunzhihui.com">domisong</a>
+ * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2021/8/3
  */
 public class Encoder extends MessageToByteEncoder {

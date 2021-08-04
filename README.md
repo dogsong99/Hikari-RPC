@@ -1,5 +1,19 @@
 # Hikari-RPC
 
+ <center>
+     <h1>This is Dev-branch</h1>
+ </center>
+
+
+## 我的计划
+- 1、集成 SpringBoot，提供方和消费方统一用注解注入 ✅
+- 2、集成注册中心，使用 zookeeper 作为注册中心 ✅
+- 3、支持序列化算法：json，protostuff ✅
+- 4、实现常见的负载均衡策略，如：轮询、权重轮询、一致性哈希等（进行中）
+- 5、实现心跳机制
+- 6、支持重试策略
+
+
 ## 概述
 Hikari-RPC 是一个学习了解 RPC 简单框架，同时也是一个支持高扩展性的 Java RPC 框架。
 ![img.png](imgfiles/hikari-rpc-overview.png)
@@ -73,16 +87,6 @@ hikari:
 ```
 
 
-
-
-
-## 我的计划
-- 1、集成 SpringBoot，提供方和消费方统一用注解注入 ✅
-- 2、集成注册中心，使用 zookeeper 作为注册中心 ✅
-- 3、支持序列化算法：json，protostuff ✅
-- 4、实现常见的负载均衡策略，如：轮询、权重轮询、一致性哈希等（进行中）
-- 5、实现心跳机制
-- 6、支持重试策略
 
 
 ## 架构图

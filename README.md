@@ -18,9 +18,59 @@ Hikari-RPC 是一个学习了解 RPC 简单框架，同时也是一个支持高�
 ## 快速开始
 
 ### 服务端（生产者）
+```java
+interface ExampleService {
+    String sayHello();
+    
+    // ...
+}
 
+@HikariRpcService(ExampleService.class)
+class ExampleServiceImpl implements ExampleService {
+    @Override
+    public String sayHello() {
+        return "Hello, Hikari-RPC";
+    }
+    
+    // ...
+}
+```
+配置信息：
+```yaml
+# hikari-rpc config
+hikari:
+  rpc:
+    register-address: 127.0.0.1:2181
+    server-name: provider
+    timeout: 2000
+    host: 127.0.0.1
+    port: ${server.port}
+```
 
 ### 客户端（消费者）
+```java
+class ExampleController {
+
+    @HikariRpcConsumer(providerName = "provider")
+    private ExampleService exampleService;
+
+    @GetMapping("sayHello")
+    public String sayHello() {
+        return exampleService.sayHello();
+    }
+    
+    // ...
+}
+```
+配置信息：
+```yaml
+# hikari-rpc config
+hikari:
+  rpc:
+    register-address: 127.0.0.1:2181
+    server-name: consumer
+    timeout: 2000
+```
 
 
 

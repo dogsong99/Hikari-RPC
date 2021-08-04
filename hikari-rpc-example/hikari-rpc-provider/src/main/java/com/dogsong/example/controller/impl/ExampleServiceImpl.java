@@ -14,7 +14,12 @@ public class ExampleServiceImpl implements ExampleService {
 
     @Override
     public String helloWorld(String str) {
-        return "Hello, Hikari-RPC, " + str;
+        return "Hello, " + str;
+    }
+
+    @Override
+    public String sayHello() {
+        return "Hello, Hikari-RPC";
     }
 
 }

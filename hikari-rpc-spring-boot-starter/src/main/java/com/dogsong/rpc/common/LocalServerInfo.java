@@ -6,6 +6,7 @@ package com.dogsong.rpc.common;
  * @author <a href="mailto:dogsong99@gmail.com">dogsong</a>
  * @since 2021/7/28
  */
+@Deprecated
 public class LocalServerInfo {
 
     /** 本地启动地址 */

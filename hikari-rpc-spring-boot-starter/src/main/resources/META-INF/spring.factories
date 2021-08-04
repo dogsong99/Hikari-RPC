@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.dogsong.rpc.config.HikariAutoConfiguration,\
+com.dogsong.rpc.config.ProviderAutoConfiguration,\
+com.dogsong.rpc.config.ConsumerAutoConfiguration

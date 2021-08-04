@@ -64,18 +64,7 @@
                 <artifactId>netty-all</artifactId>
                 <version>${netty_version}</version>
             </dependency>
-            <!-- Spring -->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework</groupId>-->
-<!--                <artifactId>spring-context</artifactId>-->
-<!--                <version>${spring_version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework</groupId>-->
-<!--                <artifactId>spring-test</artifactId>-->
-<!--                <version>${spring_version}</version>-->
-<!--                <scope>test</scope>-->
-<!--            </dependency>-->
+
             <!-- Spring boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -104,6 +93,13 @@
                 <version>${spring_boot_version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring_boot_version}</version>
+                <scope>test</scope>
+            </dependency>
+
             <!-- Protostuff -->
             <dependency>
                 <groupId>com.dyuproject.protostuff</groupId>
@@ -115,12 +111,31 @@
                 <artifactId>protostuff-runtime</artifactId>
                 <version>${protostuff_version}</version>
             </dependency>
+
+            <!-- zookeeper -->
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper_version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
             <!-- Jedis -->
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis_version}</version>
             </dependency>
+
             <!-- lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -130,6 +145,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 
 </project>

@@ -16,4 +16,6 @@ public interface ExampleService {
      */
     String helloWorld(String str);
 
+    String sayHello();
+
 }

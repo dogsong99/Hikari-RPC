@@ -46,22 +46,25 @@ public class RegistryServer {
     public void register() throws ZkConnectException {
         try {
             // 获取 zookeep 连接
-            ZooKeeper zooKeeper = new ZooKeeper(addr, timeout, event -> {
-                logger.info("registry zk connect success...");
-            });
+            ZooKeeper zooKeeper = new ZooKeeper(
+                    addr, timeout,
+                    event -> logger.info("registry zk connect success...")
+            );
             // 判断节点是否存在
             if (zooKeeper.exists(Constants.ZK_ROOT_DIR, false) == null) {
                 // 创建 hikari-rpc 跟节点
                 zooKeeper.create(Constants.ZK_ROOT_DIR, Constants.ZK_ROOT_DIR.getBytes(),
                         ZooDefs.Ids.OPEN_ACL_UNSAFE,
                         // 持久化节点
-                        CreateMode.PERSISTENT);
+                        CreateMode.PERSISTENT
+                );
             }
             zooKeeper.create(Constants.ZK_ROOT_DIR + "/" + serverName,
                     (serverName + ","+ host + ":" + port).getBytes(),
                     ZooDefs.Ids.OPEN_ACL_UNSAFE,
                     // 临时节点
-                    CreateMode.EPHEMERAL_SEQUENTIAL);
+                    CreateMode.EPHEMERAL_SEQUENTIAL
+            );
             logger.info("provider register success {}", serverName);
         } catch (Exception e) {
             throw new ZkConnectException("register to zk exception," + e.getMessage(), e.getCause());

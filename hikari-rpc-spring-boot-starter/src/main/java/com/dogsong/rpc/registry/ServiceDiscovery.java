@@ -3,6 +3,8 @@ package com.dogsong.rpc.registry;
 import com.dogsong.rpc.common.Constants;
 import com.dogsong.rpc.exception.ZkConnectException;
 import com.dogsong.rpc.model.ProviderInfo;
+import com.google.common.collect.Lists;
+import org.apache.commons.lang.exception.ExceptionUtils;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
 import org.slf4j.Logger;
@@ -23,7 +25,7 @@ public class ServiceDiscovery {
 
     private final Logger logger = LoggerFactory.getLogger(ServiceDiscovery.class);
 
-    private volatile List<ProviderInfo> dataList = new ArrayList<>();
+    private volatile List<ProviderInfo> dataList = Lists.newArrayList();
 
     /**
      * 服务发现构造函数
@@ -39,7 +41,7 @@ public class ServiceDiscovery {
             // 监听节点
             watchNode(zooKeeper);
         } catch (Exception e) {
-            throw new ZkConnectException("connect to zk exception," + e.getMessage(), e.getCause());
+            throw new ZkConnectException("connect to zk exception," + e.getMessage(), ExceptionUtils.getCause(e));
         }
     }
 
@@ -78,7 +80,7 @@ public class ServiceDiscovery {
             this.dataList = providerInfos;
             logger.info("获取服务端列表成功：{}", this.dataList);
         } catch (Exception e) {
-            logger.error("watch error,", e);
+            logger.error("watch error, {}.", ExceptionUtils.getStackTrace(e));
         }
     }
 

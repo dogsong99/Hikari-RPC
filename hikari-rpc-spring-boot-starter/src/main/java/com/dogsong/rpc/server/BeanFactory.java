@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentMap;
 public class BeanFactory {
 
     /** 持有当前 hikari-rpc 服务提供的所有的服务，即有@RpcService注解的类 */
-    private static ConcurrentMap<Class<?>, Object> beans = Maps.newConcurrentMap();
+    private static final ConcurrentMap<Class<?>, Object> beans = Maps.newConcurrentMap();
 
     private BeanFactory(){
     }
